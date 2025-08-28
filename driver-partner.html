@@ -85,47 +85,63 @@
           <div class="g-line"></div>
           <p>We're a growing startup looking for passionate people like you!</p>
           
-          <form action="https://formspree.io/f/mjkevwll" method="POST" enctype="multipart/form-data" class="contact-form">
-            <div class="form-row">
-              <input type="text" name="fullName" placeholder="Full Name*" required>
-              <input type="email" name="email" placeholder="Email Address*" required>
-            </div>
-            <div class="form-row">
-              <input type="tel" name="phone" placeholder="Phone Number*" required>
-              <input type="url" name="portfolio" placeholder="LinkedIn / Portfolio / GitHub">
-            </div>
-            <div class="form-row">
-              <input type="text" name="position" placeholder="Position You're Applying For*" required>
-              <input type="text" name="skills" placeholder="Key Skills*" required>
-            </div>
-            <textarea name="whyJoin" placeholder="Why do you want to join our startup?*" required></textarea>
-            <textarea name="uniqueAbout" placeholder="Tell us something unique about yourself*" required></textarea>
-            
-            <div class="file-upload">
-              <label for="resume"><i class="fas fa-upload"></i> Upload Resume (PDF only)</label>
-              <input type="url" name="resumeLink" placeholder="Paste resume link (Google Drive/Dropbox)">
+          <form action="https://formspree.io/f/mvgbgjjg" method="POST" enctype="multipart/form-data" class="contact-form">
 
-              <p class="upload-helper">
-                Or email your PDF resume to <a href="mailto:info@zipspeeds.com">support@zipspeeds.com</a>
-              </p>
+            <label for="fullName" class="form-label">Full Name<span style="color:#db2c2c;">*</span></label>
+            <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+
+            <label for="email" class="form-label">Email Address<span style="color:#db2c2c;">*</span></label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" required>
+
+            <label for="phone" class="form-label">Phone Number<span style="color:#db2c2c;">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="+91-XXXXXXXXXX" required>
+
+            <label for="profile" class="form-label">LinkedIn / Portfolio / GitHub</label>
+            <input type="text" id="profile" name="profile" placeholder="Paste your profile link">
+
+            <label for="position" class="form-label">Position You're Applying For<span style="color:#db2c2c;">*</span></label>
+            <input type="text" id="position" name="position" placeholder="E.g. Full Stack Developer" required>
+
+            <label for="skills" class="form-label">Key Skills<span style="color:#db2c2c;">*</span></label>
+            <input type="text" id="skills" name="skills" placeholder="E.g. JavaScript, Logistics, ..." required>
+
+            <label for="why" class="form-label">Why do you want to join our startup?<span style="color:#db2c2c;">*</span></label>
+            <textarea id="why" name="whyJoin" rows="3" placeholder="Tell us why you want to join us" required></textarea>
+
+            <label for="unique" class="form-label">Tell us something unique about yourself<span style="color:#db2c2c;">*</span></label>
+            <textarea id="unique" name="uniqueAbout" rows="2" placeholder="Something that sets you apart" required></textarea>
+
+            <label class="form-label">Upload Resume (PDF only)</label>
+            <input type="url" id="resumeLink" name="resumeLink" placeholder="Paste resume link (Google Drive/Dropbox)">
+            <div class="upload-helper">
+              Or email your PDF resume to 
+              <a href="mailto:info@zipspeeds.com" tabindex="-1">info@zipspeeds.com</a>
             </div>
-            
+
             <div class="form-row">
-              <input type="text" name="availability" placeholder="Availability / Notice Period*" required>
-              <select name="workType" required>
-                <option value="">Preferred Work Type*</option>
-                <option value="full-time">Full-time</option>
-                <option value="part-time">Part-time</option>
-                <option value="internship">Internship</option>
-                <option value="freelance">Freelance</option>
-              </select>
+              <div style="flex:1;">
+                <label for="availability" class="form-label">Availability / Notice Period<span style="color:#db2c2c;">*</span></label>
+                <input type="text" id="availability" name="availability" placeholder="E.g. Immediate, 30 days" required>
+              </div>
+              <div style="flex:1;">
+                <label for="workType" class="p-form-label">Preferred Work Type<span style="color:#db2c2c;">*</span></label>
+                <select id="workType" name="workType" required>
+                  <option value="">Select...</option>
+                  <option value="full-time">Full-time</option>
+                  <option value="part-time">Part-time</option>
+                  <option value="internship">Internship</option>
+                  <option value="freelance">Freelance</option>
+                </select>
+              </div>
             </div>
-            
+
             <div class="checkbox-group">
               <input type="checkbox" id="confirm" name="confirm" required>
-              <label for="confirm" class="c-text">I confirm the information provided is true and correct.</label>
+              <label for="confirm" class="check-text">
+                I confirm the information provided is true and correct.
+              </label>
             </div>
-            
+
             <button type="submit"><i class="fas fa-paper-plane"></i> Submit Application</button>
           </form>
         </div>
